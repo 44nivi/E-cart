@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Notes App</title>
+<script type="text/javascript" src="scripts.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+body {
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+.container2 {
+    max-width: 413px;
+    margin: 64px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+.header {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+input[type="text"] {
+	width: 70%;
+	padding: 10px;
+	margin-right: 10px;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #007BFF;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.notes-list {
+	margin-top: 20px;
+}
+.stored {
+	margin-top: 20px;
+}
+
+.note-item {
+	padding: 10px;
+	margin: 5px 0;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.note-item button {
+	background-color: #FF5733;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merge cell borders for a cleaner look */
+    border: 1px solid #ccc; /* Add a border for the table */
+}
+ td {
+    border: 1px solid #ccc; /* Cell borders */
+    padding: 10px;
+    text-align: left;
+}
+</style>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>My Notes</h1>
+		</div>
+		<div class="input-area">
+			<input type="text" id="note-input" placeholder="Enter your note...">
+			<button onclick="addNote()">Add</button>
+		</div>
+		<div class="notes-list" id="notes-list">
+			<!-- Notes will be displayed here -->
+		</div>
+		
+	</div>
+	<button onclick="submitsData()">Submit</button>
+	<div class="container2" id="container2">
+		</div>
+	
+</body>
+</html>
+
+
+
+
