@@ -1,0 +1,2 @@
+INFO  | 2024-01-17 12:54:08 | [main] sample_prgm.Sample_Logger_prg (Sample_Logger_prg.java:11) - Hello this is a debug message
+INFO  | 2024-01-17 12:56:30 | [main] sample_prgm.Sample_Logger_prg (Sample_Logger_prg.java:11) - Hello this is a debug message
