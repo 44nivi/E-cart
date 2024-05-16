@@ -1,0 +1,436 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="Admin_script/Loading.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+ .titel .sub-heading{
+    margin-top: 10px;
+    text-align: center;
+    color: #30034c;
+    text-transform: capitalize;
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5;
+    z-index: 9;
+}
+
+.nav{
+    padding: 10px 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-logo{
+   width: 20%;
+    height: 132px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-transform: capitalize;
+    background: none;
+    color: #a9a9a9;
+    outline: none;
+
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    width: 500px;
+    display: flex;
+}
+
+.search-box{
+    width: 80%;
+    height: 62px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #d1d1d1;
+    text-transform: capitalize;
+    background: none;
+    color: #a9a9a9;
+    outline: none;
+}
+.home_logo {
+    height: 85px;
+    background-color: transparent;
+    margin-left: -480px;
+    margin-top:-80px;
+}
+.search-btn{
+    width: 20%;
+    height: 62px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #383838;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search-box::placeholder{
+    color: #a9a9a9;
+}
+
+.nav-items a{
+    margin-left: 20px;
+}
+
+.nav-items a img{
+    width: 40px;
+}
+
+/*  ************************************css of menu ***************************************************** */
+
+.links-container{
+    width: 100%;
+    display: flex;
+    padding: 10px 10vw;
+    justify-content: center;
+    list-style: none;
+    border-top: 1px solid #d1d1d1;
+}
+
+.link{
+    text-transform: capitalize;
+    padding: 0 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #383838;
+    opacity: 0.5;
+    transition: .5s;
+}
+
+.link:hover{
+    opacity: 1;
+}
+
+/******************************************image body**********************************/
+
+.hero-section{
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-image: url('home image/stand.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .logo{
+    height: 300 px;
+    display: block;
+    margin: auto;
+}
+
+.hero-section .sub-heading{
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: 300;
+}
+/****************************************cards css**************************************************/
+.product{
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.product-category{
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.product-container{
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+      flex-wrap: wrap;
+       gap: 50px;
+    
+}
+
+.product-container::-webkit-scrollbar{
+    display: none;
+}
+
+.product-card{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+}
+
+.product-image{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.product-thumb{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.discount-tag{
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.card-btn{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-card:hover .card-btn{
+    opacity: 1;
+}
+
+.card-btn:hover{
+    background: #efefef;
+}
+
+.product-info{
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.product-brand{
+    text-transform: uppercase;
+}
+
+.product-short-des{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.price{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.actual-price{
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+/***********************************footer css *************************************************/
+.foot{
+
+
+    background-color: #A9A99A;
+}
+.footer-title, .info{
+    color: #4b3333;
+    margin: 20px 0;
+    text-transform: capitalize;
+    
+}
+
+.footer-title{
+    margin-top: 80px;
+    color:#000033;
+    font-size: 30px;
+    text-align: center 
+}
+
+.footer-social-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-link{
+    color: #851c1c;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+
+.social-link:nth-child(1){
+    margin-left: 0;
+}
+
+.footer-credit{
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+}
+</style>
+<body>
+<!-- *************************************** header of the page ******************************************** -->
+<nav class="navbar">
+<div class="nav">
+    <img src="home image/2.png" class="brand-logo" alt="">
+    <header class="titel">
+    <p class="sub-heading">Men's Clothing</p>
+    <div  class="homelogo" id="homeButton">
+    <a href="home.html">
+     <img src="home image/homebutton.png" class="home_logo" alt="">
+    </a>
+    </div>
+    </header>
+    <div class="nav-items" >
+        <div class="search" >
+            <input type="text" class="search-box" id="myTextBox" placeholder="search brand, product">
+            <button class="search-btn" id="myButton" >search</button>
+        </div>
+        <div id="LoginPage">
+        <a href="LoginPage.html"><img src="home image/user1.jpg" onclick="LoginPage.html" alt=""></a>
+     	</div>
+        <a href="#"><img src="home image/cart.png"  alt=""></a>
+    </div>
+</div>
+
+<!-- ****************************************menu bar of the page *********************************************** -->
+
+<ul class="links-container" id="myList">
+    <li class="link-item1"><a href="Product_Loading.html"  data-value="women" class="link">women</a></li>
+    <li class="link-item2"><a href="Product_Loading.html"  data-value="men" class="link">men</a></li>
+    <li class="link-item3"><a href="Product_Loading.html"  data-value="kids" class="link">kids</a></li>
+    <li class="link-item4"><a href="Product_Loading.html"  data-value="accessories" class="link">accessories</a></li>
+</ul>
+</nav>
+<!-- ***************************************body image *********************************************************** -->
+<header class="hero-section">
+    <div class="content">
+        <img src="home image/2.png" class="logo" alt="">
+        <p class="sub-heading">best fashion collection of all time</p>
+    </div>
+</header>
+<!-- *****************************************cards section*************************************************** -->
+<section class="product">
+    <h2 class="product-category">best selling</h2>
+    <div class="product-container" id="product-container">
+    <!-- <div class="product-card">
+        <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="home image/puma.avif" class="product-thumb" alt="">
+            <button class="card-btn">add to whislist</button>
+        </div>
+        <div class="product-info">
+            <h2 class="product-brand">Puma</h2>
+            <p class="product-short-des">Quality as puma</p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="home image/addi1.avif" class="product-thumb" alt="">
+            <button class="card-btn">add to whislist</button>
+        </div>
+        <div class="product-info2">
+            <h2 class="product-brand">ADDIDAS</h2>
+            <p class="product-short-des">Rough and Tough</p>
+            <span class="price">$24</span><span class="actual-price">$48</span>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="product-image">
+            <span class="discount-tag">60% off</span>
+            <img src="home image/nike.jpg" class="product-thumb" alt="">
+            <button class="card-btn">add to whislist</button>
+        </div>
+        <div class="product-info3">
+            <h2 class="product-brand">Nike</h2>
+            <p class="product-short-des">Elite</p>
+            <span class="price">$30</span><span class="actual-price">$50</span>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="product-image">
+            <span class="discount-tag">60% off</span>
+            <img src="home image/bmw.webp" class="product-thumb" alt="">
+            <button class="card-btn">add to whislist</button>
+        </div>
+        <div class="product-info3">
+            <h2 class="product-brand">BMW</h2>
+            <p class="product-short-des">Pride</p>
+            <span class="price">$45</span><span class="actual-price">$80</span>
+        </div> -->
+    </div>
+    
+</div>
+</section>
+<!-- *********************************************footer elements****************************************************** -->
+
+</body>
+<footer class="foot">
+    <p class="footer-title">about company</p>
+    <p class="info">At Men's Clothing, we believe that fashion is more than just clothing; it's a form of self-expression. Established in 2015, 
+    we are passionate about providing our customers with trendy and comfortable clothing that empowers them to feel confident in their own skin.</p>
+    <p class="info">telephone - 180 00 00 001, 180 00 00 002</p>
+    <div class="footer-social-container">
+        <div>
+            <a href="#" class="social-link">terms & services</a>
+            <a href="#" class="social-link">privacy page</a>
+        </div>
+        <div>
+            <a href="#" class="social-link">instagram</a>
+            <a href="#" class="social-link">facebook</a>
+            <a href="#" class="social-link">twitter</a>
+        </div>
+    </div>
+    <p class="footer-credit">Clothing, Best apparels online store</p>
+</footer>
+</html>
